@@ -6,7 +6,7 @@ dotenv.config()
 const app = express()
 const port = 3000
 
-import indexRouter from './routes/accessRoute'
+import indexRouter from './routes/encryptRoute'
 
 app.use(express.json())
 app.use(cors())

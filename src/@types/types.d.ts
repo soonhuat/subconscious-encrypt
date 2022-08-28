@@ -1,3 +1,3 @@
 export interface reqBody {
-  input: string
+  input: any
 }

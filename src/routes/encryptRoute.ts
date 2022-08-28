@@ -1,10 +1,14 @@
 import express, { Request, Response } from 'express'
-import encryptController from '../controllers/encryptController'
+import { encrypt, getEncryptResult } from '../controllers/encryptController'
 
 const router = express.Router()
 
-router.post('/encrpyt', function (req: Request, res: Response) {
-  encryptController(req.body, res)
+router.post('/encrypt', function (req: Request, res: Response) {
+  encrypt(req.body, res)
+})
+
+router.get('/encrypt/result/:nonce', function (req: Request, res: Response) {
+  getEncryptResult(req.params.nonce, res)
 })
 
 export default router
